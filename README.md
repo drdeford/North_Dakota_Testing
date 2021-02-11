@@ -10,6 +10,7 @@ The ND_Processing.py script prepares the necessary dual graphs from the shapefil
 2. Use the <https://github.com/mggg/maup>MAUP</a> package to aggregate the population totals from the blocks to the precincts.
 3. Create the initial dual graph of the precincts and attach the voting and population column data. This is the ND_Precincts.json file in the main repository. 
 4. Make a plot of the graph as a sanity check of the process (nodes colored by 2016 presidential election proportions):
+
 ![ND Dual Graph](https://raw.githubusercontent.com/drdeford/North_Dakota_Testing/main/Outputs/ND_Dual_Graph.png)
 5. Since there are doughnut precincts (i.e. precincts that are wholly contained in another precinct) the FLIP chain will be obstructed if we attempt to use the previous dual graph. Thus, we next make a smaller "trimmed" dual graph where the doughnuts and their population/vote totals are aggregated into the surrounding precinct. 
 6. This trimmed version is saved as the ND_Precincts_trimmed.json file in the main repository. 
