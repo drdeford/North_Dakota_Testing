@@ -18,16 +18,13 @@ The ND_Processing.py script prepares the necessary dual graphs from the shapefil
 ![Trimmed ND Dual Graph](https://raw.githubusercontent.com/drdeford/North_Dakota_Testing/main/Outputs/ND_Dual_Graph_trimmed.png)
 
 ## Chain Runs
-
-
-### Flip
-
-
-### ReCom
+There are two scripts for actual using the <https://github.com/mggg/gerrychain>GerryChain</a> package to generate an ensemble of plans using the dual graphs created by the processing script. Since this is just a test, the state is partitioned into just 4 pieces, rather then the 47 current districts. Each script corresponds to a different proposal method. The ND_Initial_FLIP_Chain.py version uses the single node flip proposal, while the ND_Initial_RECOM_Chain.py uses a version of the spanning tree ReCombination propsal introduced in [2].  Each script sets up the necessary updaters, constraints, and proposal functions and then makes a short (10,000 step and 100 step) run of the Markov chain, starting from a random seed.  At each step of each chain some partisan statistics using two-party election data from the 2016 presidential, senatorial, and gubernatorial races are recorded. Figures showing some intermediate states of the Markov chains and summary statistics at the end of the run are automatically written out to the outputs file. 
 
 
 
 
-
-
+## References
 [1] Voting and Election Science Team, 2018, "2016 Precinct-Level Election Results", https://doi.org/10.7910/DVN/NH5S2I, Harvard Dataverse, V52 
+
+[2] D. DeFord, M. Duchin, and J. Solomon, ReCombination: A family of Markov chains for redistricting, <a href ="https://arxiv.org/abs/1911.05725">arXiv:1911.05725<a/>, (2019). 
+
